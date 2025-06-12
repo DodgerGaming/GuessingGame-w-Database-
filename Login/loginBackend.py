@@ -1,6 +1,7 @@
 from tkinter import messagebox
 import sqlite3
-
+from SignUp.signUpUI import create_signupUI
+ 
 def validate_account (username, password, loginframe):
 
     conn = sqlite3.connect("System.db")
@@ -18,4 +19,7 @@ def validate_account (username, password, loginframe):
         
     else:
         messagebox.showerror(message  = "Invalid password!")
-    
+
+def goto_signup(parentwindow, loginframe):
+    loginframe.destroy
+    create_signupUI(parentwindow)
