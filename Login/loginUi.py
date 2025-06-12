@@ -34,7 +34,7 @@ def create_loginUI (parentwindow):
     btn_login = customtkinter.CTkButton(loginframe, text = "Log-in", command = lambda: validate_account(entry_login.get(), entry_password.get(), loginframe)) # pass inputted username, password to determine if the account is valid and the whole login ui to destroy it if account is valid.
     btn_login.grid(row = 3, columnspan = 3, pady = (15, 15))
 
-    btn_signup = customtkinter.CTkButton(loginframe, text = "Sign Up", command = create_signupUI)
+    btn_signup = customtkinter.CTkButton(loginframe, text = "Sign Up", command = create_signupUI(parentwindow))
     btn_signup.grid(row = 4, columnspan = 3, pady = (5, 40))
 
 
