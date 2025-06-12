@@ -20,6 +20,6 @@ def validate_account (username, password, loginframe):
     else:
         messagebox.showerror(message  = "Invalid password!")
 
-def goto_signup(parentwindow, loginframe):
-    loginframe.destroy
+def goto_signup(parentwindow, loginframe): # destroy the whole login UI para pagpasa ng window sa sign up, maipakita niya ung UI
+    loginframe.destroy()
     create_signupUI(parentwindow)
