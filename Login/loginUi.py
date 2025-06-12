@@ -4,7 +4,7 @@ from SignUp.signUpUI import create_signupUI
 
 def create_loginUI (parentwindow): 
     parentwindow.title("Log In")
-    parentwindow.geometry('285x450')
+    parentwindow.geometry('285x330')
 
     # =============================================
     #                  LOG IN FRAME
@@ -27,15 +27,15 @@ def create_loginUI (parentwindow):
     lbl_password.grid(row = 2, column = 0, padx = (30, 10))
 
     entry_password = customtkinter.CTkEntry(loginframe, show = "*")
-    entry_password.grid(row = 2, column = 1, padx = (5,50), pady = 30)
+    entry_password.grid(row = 2, column = 1, padx = (5,50), pady = (30, 20))
 
 
     # ======================= LOG IN BUTTON ========================
     btn_login = customtkinter.CTkButton(loginframe, text = "Log-in", command = lambda: validate_account(entry_login.get(), entry_password.get(), loginframe)) # pass inputted username, password to determine if the account is valid and the whole login ui to destroy it if account is valid.
-    btn_login.grid(row = 3, columnspan = 3, pady = 5)
+    btn_login.grid(row = 3, columnspan = 3, pady = (15, 15))
 
     btn_signup = customtkinter.CTkButton(loginframe, text = "Sign Up", command = create_signupUI)
-    btn_signup.grid(row = 4, columnspan = 3, pady = (0, 40))
+    btn_signup.grid(row = 4, columnspan = 3, pady = (5, 40))
 
 
     return loginframe # return the frame that contains log-in UI to the parentwindow
