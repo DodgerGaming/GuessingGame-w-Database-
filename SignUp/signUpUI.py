@@ -3,7 +3,7 @@ from SignUp.signUpLogic import confirm_account
 
 def create_signupUI (parentwindow):
     parentwindow.title("Sign Up")
-    parentwindow.geometry('285x285')
+    parentwindow.geometry('285x330')
 
     # =============================================
     #                  SIGN UP FRAME
